@@ -5,7 +5,7 @@ declare global {
         title: string;
         icon: ConstructorOfATypedSvelteComponent;
         href: string;
-      }
+      };
     }
   }
 }

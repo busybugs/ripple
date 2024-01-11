@@ -21,4 +21,3 @@ cd build && node index.js
 ```
 
 Feel free to refer to the [@sveltejs/adapter-node](https://kit.svelte.dev/docs/adapter-node) docs to configure `HOST`, `PORT` environment variables, etc. further.
-
