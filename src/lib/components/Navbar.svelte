@@ -1,12 +1,14 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
   import { page } from "$app/stores";
-  import { Button } from "$lib/components/ui/button";
+  import { Button } from "./ui/button";
 
   export let buttons: App.Navbar.Button[];
 </script>
 
-<nav class="flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1">
+<nav
+  class="flex justify-center space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1"
+>
   {#each buttons as button}
     <Button
       href={button.href}
