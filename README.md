@@ -1,6 +1,6 @@
 ### Build from source
 
-We provide a `Docker` image for building `ripple` from source. To build and run the image ensure you have [Docker](https://docs.docker.com/get-docker/) installed and follow:
+We provide a `Docker` image for building `ripple` from source. To build and run the image ensure you have [Docker](https://docs.docker.com/get-docker/) installed. Afterwards, run:
 
 ```bash
 # Replace <tag> with a tag of your choice
@@ -15,7 +15,7 @@ docker run -d -p 3000:3000 ripple:<tag>
 # => Visit http://localhost:3000 to see the app running
 ```
 
-If you don't want to use `Docker`, ensure you have [Node.js](https://nodejs.org/en) and [pnpm](https://pnpm.io/installation) installed. If you are open to use the binary distribution of `pnpm`, there is an easy way to install and manage `Node.js` versions:
+If you don't want to use `Docker`, ensure you have [Node.js](https://nodejs.org/en) and [pnpm](https://pnpm.io/installation) installed. If you are open to using the binary distribution of `pnpm`, there is an easy way to install and manage `Node.js` versions:
 
 ```bash
 # Install pnpm
