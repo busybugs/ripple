@@ -1,6 +1,21 @@
 ### Build from source
 
-We don't have an `Docker` image (yet). First ensure you have [Node.js](https://nodejs.org/en) and [pnpm](https://pnpm.io/installation) installed. If you are open to use the binary distribution of `pnpm`, there is an easy way to install and manage `Node.js` versions:
+We provide a `Docker` image for building `ripple` from source. To build and run the image ensure you have [Docker](https://docs.docker.com/get-docker/) installed and follow:
+
+```bash
+# Replace <tag> with a tag of your choice
+docker build -t ripple:<tag> .
+
+# You can try listing your images
+docker images
+
+# Run the image. Replace <tag> with the tag you chose earlier
+docker run -d -p 3000:3000 ripple:<tag>
+
+# => Visit http://localhost:3000 to see the app running
+```
+
+If you don't want to use `Docker`, ensure you have [Node.js](https://nodejs.org/en) and [pnpm](https://pnpm.io/installation) installed. If you are open to use the binary distribution of `pnpm`, there is an easy way to install and manage `Node.js` versions:
 
 ```bash
 # Install pnpm
@@ -17,7 +32,11 @@ Once done, you can:
 pnpm install && pnpm build
 
 # Run the built project
-cd build && node index.js
+pnpm start
+
+# => Visit http://localhost:3000 to see the app running
 ```
 
-Feel free to refer to the [@sveltejs/adapter-node](https://kit.svelte.dev/docs/adapter-node) docs to configure `HOST`, `PORT` environment variables, etc. further.
+### References
+
+- Empty...
