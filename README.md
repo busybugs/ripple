@@ -1,6 +1,6 @@
-### Build from source
+### 1. Build from source
 
-We provide a `Docker` image for building `ripple` from source. To build and run the image ensure you have [Docker](https://docs.docker.com/get-docker/) installed. Afterwards, run:
+To build and run the `Docker` image ensure you have [Docker](https://docs.docker.com/get-docker/) installed. Afterwards, run:
 
 ```bash
 # Replace <tag> with a tag of your choice
@@ -37,6 +37,26 @@ pnpm start
 # => Visit http://localhost:3000 to see the app running
 ```
 
-### References
+### 2. Deploy to Cloud Run
+
+You need to prepare a `Docker` image to deploy to `Cloud Run`. First, ensure you have the [gcloud](https://cloud.google.com/sdk/docs/install) CLI installed. Afterwards, run:
+
+```bash
+# Login to your GCP account and setup Docker
+gcloud auth login --no-launch-browser
+gcloud auth configure-docker
+
+# Select your project. Replace <project-id> with your project ID
+gcloud config set project <project-id>
+
+# Push the image to GCR. Replace <tag> with the tag you chose earlier during the build and <project-id> with your project ID
+docker tag ripple:<tag> gcr.io/<project-id>/ripple:<tag>
+docker push gcr.io/<project-id>/ripple:<tag>
+
+# Clean dangling images
+docker image prune
+```
+
+### 3. References
 
 - Empty...
