@@ -1,4 +1,10 @@
-### 1. Build from source
+**DISCLAIMER: WIP (Work in Progress)**
+
+### 1. About the project
+
+Please refer to [THE-DOC.md](/THE-DOC.md) which has all the details of the project covered in a comprehensible format.
+
+### 2. Build from source
 
 To build and run the `Docker` image ensure you have [Docker](https://docs.docker.com/get-docker/) installed. Afterwards, run:
 
@@ -37,7 +43,7 @@ pnpm start
 # => Visit http://localhost:3000 to see the app running
 ```
 
-### 2. Deploy to Cloud Run
+### 3. Deploy to Cloud Run
 
 You need to prepare a `Docker` image to deploy to `Cloud Run`. First, ensure you have the [gcloud](https://cloud.google.com/sdk/docs/install) CLI installed. Afterwards, run:
 
@@ -57,6 +63,6 @@ docker push gcr.io/<project-id>/ripple:<tag>
 docker image prune
 ```
 
-### 3. References
+### 4. References
 
 - Empty...
