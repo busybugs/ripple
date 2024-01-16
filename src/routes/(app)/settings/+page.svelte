@@ -9,7 +9,7 @@
   <div class="space-y-0.5">
     <h2 class="text-2xl font-bold tracking-tight">Settings</h2>
     <p class="w-72 text-muted-foreground sm:w-full">
-      Manage your account settings and set e-mail preferences.
+      Manage your account settings.
     </p>
   </div>
 </div>

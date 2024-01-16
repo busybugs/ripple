@@ -10,9 +10,9 @@
       href: "/",
     },
     {
-      title: "Raw Items",
+      title: "Materials",
       icon: FileText,
-      href: "/raw-items",
+      href: "/materials",
     },
     {
       title: "Formulae",
