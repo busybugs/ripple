@@ -17,7 +17,7 @@ We are `Busy Bugs`, a team of 4 enthusiastic students from *Assam down town Univ
 
 We are very cautious of over-engineering. We have chosen our tools by striking a fine balance between velocity, flexibility, reliability and control.
 
-#### 3.1. Architecture
+##### 3.1. Infrastructure
 
 - Our front-end is essentially a self-contained `SvelteKit` app that can independently scale. With the help of [Docker](https://www.docker.com/) we can easily create an image and host it on [Cloud Run](https://cloud.google.com/run?hl=en), which is arguably the best choice for us as it has no additional infrastructure maintenance.
 - For database, we went with the all time reliable [Postgres](https://www.postgresql.org/) and [Cloud SQL for Postgres](https://cloud.google.com/sql/postgresql?hl=en) to host our database.
@@ -25,14 +25,30 @@ We are very cautious of over-engineering. We have chosen our tools by striking a
 - [Compute Engine](https://cloud.google.com/compute?hl=en) instance is used to host our `API` server. This choice was simple cause we wanted full control over the system for our `API` server.
 - other `GCP` tools that make this project possible *(and well integrated!)*...
 
-##### 3.2. Front-end
+##### 3.2. Design
+- Our base design revolved around: items, formulae, properties and constraints.
+- Users can create categories and arrange them. They can create items under each category and define properties on them. <br>
+  e.g. Item "Mango" with properties *color*, *shape* etc.
+- There are two "super categories" - raw materials and processed items.
+- Processed items are raw materials that have altered properties based on result of a formula application.
+- Users can create concrete and generic formulae that define a way through which an item should be processed. <br>
+  e.g. Formula "Machine" that lets say sorts the mangoes according to their color.
+- Users can create constraints that work as guard during the optimization process. <br>
+  e.g. Constraint *cost* should be lower than ₹ 1 lakh per month.
+- Users can create a base PERT diagram to define their flow.
+- Users click the optimize button and the solution goes through all the constraints and tries to modify the flow in a way that reaches all goals. If the goal is unreachable, it prompts the user to modify the constraints or lower the production target.
+- Users can create observation pins in the flow and connect their hardware with `ripple` to get real-time analytics while `ripple` makes suggestions to modify the architecture and more.
+- Visual scripting is a very big part of what `ripple` is + Plugin API is crucial.
+- This is not an exhaustive list of all the nuts and bolts!
+
+##### 3.3. Front-end
 
 - `Svelte + SvelteKit` - Our development velocity is highest with [SvelteKit](https://kit.svelte.dev/).
 - `Tailwind + shadcn-svelte` - [shadcn/ui](https://ui.shadcn.com/) is absolutely fantastic. We use the `Svelte` port [shadcn-svelte](https://www.shadcn-svelte.com/) for this project which provides us with very customizable components which never slows us down!
 - `TypeScript` - We like our app typed!
 - other libraries and tools that make our features possible like [d3](https://d3js.org/) for visualization and more...
 
-##### 3.3. Back-end
+##### 3.4. Back-end
 
 Our backend is broadly divided into two parts: a `SvelteKit` adapter server and our `API` server.
 
