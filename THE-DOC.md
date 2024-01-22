@@ -35,7 +35,7 @@ We are very cautious of over-engineering. We have chosen our tools by striking a
   e.g. Formula "Machine" that lets say sorts the mangoes according to their color.
 - Users can create constraints that work as guard during the optimization process. <br>
   e.g. Constraint *cost* should be lower than ₹ 1 lakh per month.
-- Users can create a base PERT diagram to define their flow.
+- Users can create a base PERT-like diagram to define their flow.
 - Users click the optimize button and the solution goes through all the constraints and tries to modify the flow in a way that reaches all goals. If the goal is unreachable, it prompts the user to modify the constraints or lower the production target.
 - Users can create observation pins in the flow and connect their hardware with `ripple` to get real-time analytics while `ripple` makes suggestions to modify the architecture and more.
 - Visual scripting is a very big part of what `ripple` is + Plugin API is crucial.

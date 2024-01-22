@@ -34,7 +34,7 @@
     <aside class="lg:w-1/5">
       <Navbar buttons={navbarButtons} />
     </aside>
-    <div class="flex-1 lg:max-w-2xl">
+  <div class="flex-1 lg:max-w-7xl">
       <slot />
     </div>
   </div>
