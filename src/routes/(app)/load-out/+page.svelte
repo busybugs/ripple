@@ -2,8 +2,8 @@
   import { Button } from "$lib/components/ui/button";
   import { Input } from "$lib/components/ui/input";
   import { Badge } from "$lib/components/ui/badge";
-  import { Plus, Check, ArrowRight } from "radix-icons-svelte";
   import { categories, items } from "$lib/store";
+  import { Plus, Check, ArrowRight } from "lucide-svelte";
 
   let hideAddCategory = true;
   let hideAddItem = true;

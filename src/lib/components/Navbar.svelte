@@ -20,7 +20,7 @@
         "justify-start",
       )}
     >
-      <svelte:component this={button.icon} class="sm:mr-2" />
+      <svelte:component this={button.icon} class="sm:mr-2 h-[1.2rem] w-[1.2rem]" />
       <span class="hidden sm:block">{button.title}</span>
     </Button>
   {/each}

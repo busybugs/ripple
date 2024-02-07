@@ -1,7 +1,7 @@
 <script lang="ts">
   import { ModeWatcher } from "mode-watcher";
   import Navbar from "$lib/components/Navbar.svelte";
-  import { Home, Gear, FileText, MagicWand } from "radix-icons-svelte";
+  import { Home, Cog, FileText, Wand2 } from "lucide-svelte";
 
   const navbarButtons: App.Navbar.Button[] = [
     {
@@ -10,18 +10,18 @@
       href: "/",
     },
     {
-      title: "Materials",
+      title: "Load Out",
       icon: FileText,
-      href: "/materials",
+      href: "/load-out",
     },
     {
       title: "Formulae",
-      icon: MagicWand,
+      icon: Wand2,
       href: "/formulae",
     },
     {
       title: "Settings",
-      icon: Gear,
+      icon: Cog,
       href: "/settings",
     },
   ];
