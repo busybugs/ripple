@@ -14,20 +14,16 @@
 
 <div class="space-y-6">
   <div class="space-y-0.5">
-    <h2 class="text-2xl font-bold tracking-tight">
-      Materials
-    </h2>
+    <h2 class="text-2xl font-bold tracking-tight">Materials</h2>
 
-    <p class="w-72 text-muted-foreground sm:w-full pb-6">
+    <p class="w-72 pb-6 text-muted-foreground sm:w-full">
       Add, manage, and categorize the materials.
     </p>
   </div>
 
   <div class="grid grid-cols-2">
     <div class="space-y-0.5">
-      <h3 class="text-xl font-bold tracking-tight mb-4">
-        Categories
-      </h3>
+      <h3 class="mb-4 text-xl font-bold tracking-tight">Categories</h3>
 
       <ul class="mb-5">
         {#each $categories as category, i}
@@ -38,14 +34,18 @@
         {/each}
       </ul>
 
-      <form class="pt-5 pb-5" class:hidden={hideAddCategory}>
-        <Input bind:value={categoryContent} placeholder="Category name..." class="lg:max-w-md mb-3" />
+      <form class="pb-5 pt-5" class:hidden={hideAddCategory}>
+        <Input
+          bind:value={categoryContent}
+          placeholder="Category name..."
+          class="mb-3 lg:max-w-md"
+        />
 
         <Button
           type="submit"
           variant="outline"
           on:click={() => {
-            if(!categoryContent) return;
+            if (!categoryContent) return;
             $categories = [...$categories, categoryContent];
           }}
         >
@@ -72,13 +72,10 @@
           Add Category
         </Button>
       </div>
-
     </div>
 
     <div class="space-y-0.5">
-      <h3 class="text-xl font-bold tracking-tight mb-4">
-        Items
-      </h3>
+      <h3 class="mb-4 text-xl font-bold tracking-tight">Items</h3>
 
       <ul class="mb-5">
         {#each [...$items] as [item, category], i}
@@ -91,15 +88,23 @@
         {/each}
       </ul>
 
-      <form class="pt-5 pb-5" class:hidden={hideAddItem}>
-        <Input bind:value={itemContent} placeholder="Item name..." class="lg:max-w-md mb-3" />
-        <Input bind:value={itemCategoryContent} placeholder="Category name..." class="lg:max-w-md mb-3" />
+      <form class="pb-5 pt-5" class:hidden={hideAddItem}>
+        <Input
+          bind:value={itemContent}
+          placeholder="Item name..."
+          class="mb-3 lg:max-w-md"
+        />
+        <Input
+          bind:value={itemCategoryContent}
+          placeholder="Category name..."
+          class="mb-3 lg:max-w-md"
+        />
 
         <Button
           type="submit"
           variant="outline"
           on:click={() => {
-            if(!itemContent || !itemCategoryContent) return;
+            if (!itemContent || !itemCategoryContent) return;
             $items.set(itemContent, itemCategoryContent);
             $items = $items;
           }}
@@ -119,10 +124,7 @@
       </form>
 
       <div class:hidden={!hideAddItem}>
-        <Button
-          variant="outline"
-          on:click={() => (hideAddItem = !hideAddItem)}
-        >
+        <Button variant="outline" on:click={() => (hideAddItem = !hideAddItem)}>
           <Plus class="mr-2" />
           Add Item
         </Button>
