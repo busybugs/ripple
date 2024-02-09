@@ -19,6 +19,7 @@
     "@types/eslint": "8.56.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
+    "@xyflow/svelte": "^0.0.35",
     "autoprefixer": "^10.4.17",
     "bits-ui": "^0.14.0",
     "clsx": "^2.1.0",
